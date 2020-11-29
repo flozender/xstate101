@@ -27,5 +27,5 @@ const promiseService = interpret(promiseMachine).onTransition((state) =>
 promiseService.start();
 // => 'pending'
 
-promiseService.send("REJECT");
+promiseService.send("RESOLVE");
 // => 'resolved'

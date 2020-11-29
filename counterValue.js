@@ -20,5 +20,5 @@ const counterService = interpret(counterMachine).onTransition((state) =>
 
 counterService.start();
 counterService.send("INCREMENT", { value: 2 });
-counterService.send("INCREMENT", { value: 2 });
-counterService.send("INCREMENT", { value: 2 });
+counterService.send("INCREMENT", { value: 3 });
+counterService.send("INCREMENT", { value: 4 });

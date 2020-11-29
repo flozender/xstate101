@@ -53,8 +53,8 @@ const promiseService = interpret(promiseMachine).onTransition((state) =>
 promiseService.start();
 // => 'pending'
 
-// promiseService.send("REJECT");
-// // => 'rejected'
-
 promiseService.send("RESOLVE");
 // => 'resolved'
+
+// promiseService.send("REJECT");
+// // => 'rejected'
