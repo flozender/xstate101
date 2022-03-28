@@ -7,13 +7,13 @@ const lightDelayMachine = Machine({
     green: {
       after: {
         // after 1 second, transition to yellow
-        2000: "yellow",
+        1000: "yellow",
       },
     },
     yellow: {
       after: {
         // after 0.5 seconds, transition to red
-        2000: "red",
+        500: "red",
       },
     },
     red: {

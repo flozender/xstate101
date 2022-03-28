@@ -12,8 +12,8 @@ const rejectFn = () => {
   console.log("reject");
 };
 
-const dummyFn = () => {
-  console.log("dummy");
+const aResolveFn2 = () => {
+  console.log("after resolve 2");
 };
 
 const promiseMachine = Machine(
@@ -33,7 +33,7 @@ const promiseMachine = Machine(
       resolved: {
         type: "final",
         entry: "bResolveFn",
-        exit: ["dummyFn", "aResolveFn"],
+        exit: ["aResolveFn", "aResolveFn2"],
       },
       rejected: {
         type: "final",
@@ -41,7 +41,7 @@ const promiseMachine = Machine(
     },
   },
   {
-    actions: { aResolveFn, bResolveFn, rejectFn, dummyFn },
+    actions: { aResolveFn, bResolveFn, rejectFn, aResolveFn2 },
   }
 );
 
